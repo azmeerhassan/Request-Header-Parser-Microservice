@@ -1,4 +1,4 @@
-Day 1 - Project Setup & Understanding Request Headers
+Project Setup & Understanding Request Headers
 
 Created new project folder and initialized npm.
 
@@ -9,3 +9,16 @@ Learned about HTTP headers and how to inspect them using req.headers.
 Identified which keys (ipaddress, language, software) are needed for the final API.
 
 Tested /api/headers route to view all request headers.
+
+
+Building /api/whoami Endpoint
+
+Added new route /api/whoami.
+
+Used Express’s req.ip, req.headers['accept-language'], and req.headers['user-agent'] to extract client info.
+
+Returned structured JSON response { ipaddress, language, software }.
+
+Tested endpoint locally using localhost:3000/api/whoami.
+
+Verified output structure matches FreeCodeCamp test requirements.
