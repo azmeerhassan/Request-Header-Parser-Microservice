@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 
+//Serve the homepage
 app.get('/', (req, res) => {
-  res.send('Header Parser Microservice');
+  res.sendFile(__dirname + '/views/index.html')
 });
 
+//Main API endpoint
 app.get('/api/whoami', (req, res)=>{
-    const ipaddress = req.ip
+    const ipaddress = req.ip || req.headers['x-forwarded-for'] || req.socket.remoteAddress
     const language = req.headers['accept-language']
     const software = req.headers['user-agent']
 
