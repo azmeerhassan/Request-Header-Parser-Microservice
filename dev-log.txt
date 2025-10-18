@@ -1,0 +1,11 @@
+Day 1 - Project Setup & Understanding Request Headers
+
+Created new project folder and initialized npm.
+
+Installed Express and set up a basic server.
+
+Learned about HTTP headers and how to inspect them using req.headers.
+
+Identified which keys (ipaddress, language, software) are needed for the final API.
+
+Tested /api/headers route to view all request headers.
